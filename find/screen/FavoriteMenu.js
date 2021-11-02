@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import {Text, View, StyleSheet, Image, TextInput, Button, TouchableOpacity, ScrollView } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons'; 
-import { Ionicons } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons'; 
 import {Picker} from '@react-native-picker/picker';
 
 const FavoriteMenu = () => {
-   
+  
   return (
     <View style={styles.container}>
 
@@ -30,7 +30,13 @@ const FavoriteMenu = () => {
                 </View> 
 
                 <View style={[styles.right ,{flex:1}]}>
-                    <Ionicons name="bookmark-sharp" size={40} color="black" style={styles.favIcon}/>
+
+                    {/* ไอคอนตอนกด fav สีดำ */}
+                    <Fontisto name="bookmark-alt" size={45} color="black" style={styles.favIcon}/>
+
+                    {/* ไอคอนตอนยังไม่กด fav สีขาว */}
+                    {/* <Fontisto name="bookmark" size={45} color="black" style={styles.favIcon} /> */}
+
                     <Text style={styles.foodCal}>120 Kcal.</Text>                   
                 </View> 
 
@@ -113,23 +119,32 @@ const FavoriteMenu = () => {
                 <View style={styles.line} />
 
             <View style={styles.bottom}>
-                <Text style={styles.foodCalBottom}>120 Kcal.</Text>          
+                <Text style={styles.foodCalBottom}>120 Kcal.</Text>   
+
                 <View style={styles.pickerBorder}>
                     <Picker
                     // selectedValue={selectedValue}
                     // style={styles.pickerdropdown}
                     // onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
-                
+                  
                     >
                     {/* อย่าลืม disable  และจัดให้ตรงกลาง*/}
-                        <Picker.Item label="เพศ" />
-                        <Picker.Item label="ชาย" value="male" />
-                        <Picker.Item label="หญิง" value="femaile" />
+                        <Picker.Item label="กรุณาเลือก" value="" />
+                        <Picker.Item label="อาหารเช้า" value="breakfast" />
+                        <Picker.Item label="อาหารกลางวัน" value="lunch" />
+                        <Picker.Item label="อาหารเย็น" value="dinner" />
                     </Picker>
+                </View>
+
             </View>
 
-
-            </View>
+            <View style={{alignItems: "center" , marginTop: 20, marginBottom: 20}}>
+            <TouchableOpacity 
+                // onPress={} 
+                style={styles.btnContainer}>
+                <Text style={styles.btnText}>บันทึกลงตารางอาหาร</Text>
+            </TouchableOpacity>
+        </View>
 
             </ScrollView>
 
@@ -189,7 +204,7 @@ const styles = StyleSheet.create({
   },
   favIcon:{
     left: 85,
-    marginTop: -5
+    marginTop: -2
   },
   square:{
     width: 110,
@@ -275,7 +290,7 @@ const styles = StyleSheet.create({
   line:{
     height: 2,
     backgroundColor: "#adacac",
-    marginTop: 10
+    marginTop: 20
   },
   bottom:{
     flexDirection: "row",
@@ -287,17 +302,31 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 20,
     marginLeft: 40,
-    backgroundColor: "green"
+    // backgroundColor: "green"
   },
   pickerBorder:{
     flex: 1,
-    width: "40",
+    width: "80%",
     height: 40,
     borderColor: '#8ec18d',
     borderWidth: 2,
     borderRadius: 10,
     marginTop: 20,
-    backgroundColor: "pink"
+    marginRight: 40,
+  },
+  btnContainer: {
+    width: "60%",
+    elevation: 8,
+    backgroundColor: "#8ec18d",
+    borderRadius: 10,
+    paddingVertical: 10,
+    // paddingHorizontal: 20,
+  },
+  btnText: {
+    fontSize: 20,
+    color: "#fff",
+    fontWeight: "bold",
+    alignSelf: "center",
   },
 });
 
