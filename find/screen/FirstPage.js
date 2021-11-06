@@ -44,16 +44,15 @@ const styles = StyleSheet.create({
     color: "#808080"
   },
   leafLeft: {
-      top: 10,
-      left: 5,
       height: "25%",
-      width: "25%"
+      width: "40%",
+      marginTop: 10
   },
   leafRight: {
-    top: 10,
-    left: 300,
     height: "25%",
-    width: "25%"
+    width: "40%",
+    alignSelf: "flex-end",
+    marginBottom: 10
 }
   
 });

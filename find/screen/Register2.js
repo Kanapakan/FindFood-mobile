@@ -4,7 +4,7 @@ import {Picker} from '@react-native-picker/picker';
 
 
 const Register2 = () => {
-
+ 
   return (
     <View style={styles.container}>
        
@@ -26,7 +26,7 @@ const Register2 = () => {
                 
                 >
                 {/* อย่าลืม disable  และจัดให้ตรงกลาง*/}
-                    <Picker.Item label="เพศ" />
+                    <Picker.Item label="เพศ" value="00"/>
                     <Picker.Item label="ชาย" value="male" />
                     <Picker.Item label="หญิง" value="femaile" />
                 </Picker>
@@ -102,10 +102,9 @@ const styles = StyleSheet.create({
     // justifyContent: "center",
   },
   leafLeft: {
-    top: 10,
-    left: 5,
     height: "25%",
-    width: "25%"
+    width: "40%",
+    marginTop: 10
 },
   headText:{
     fontSize:35,

@@ -9,130 +9,130 @@ const Register2 = () => {
   return (
 // ข้อมูลส่วนตัว
 
-    // <View style={styles.container}>
-    //   <View style={styles.headBox} >
-    //     <Text style={styles.headText}>ข้อมูลส่วนตัว</Text>
-    //   </View>
-    //   <Text style={styles.btnTextAll}>เพศ</Text>
-    //   <View style={styles.pickerBorder}>
-    //     <Picker
-    //       // selectedValue={selectedValue}
-    //       // style={styles.pickerdropdown}
-    //       // onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
-                
-    //     >
-    //     {/* อย่าลืม disable  และจัดให้ตรงกลาง*/}
-    //       <Picker.Item label="เพศ" />
-    //       <Picker.Item label="ชาย" value="male" />
-    //       <Picker.Item label="หญิง" value="femaile" />
-    //     </Picker>
-    //   </View>
-
-    //   <Text style={styles.btnTextAll}>อายุ</Text>
-    //   <TextInput
-    //     style={styles.ageBox}
-    //     placeholder="อายุ"
-    //     keyboardType="numeric"
-    //     //value={}
-    //     //onChangeText={}
-    //   />
-
-    //   <Text style={styles.btnTextAll}>น้ำหนัก</Text>  
-    //   <TextInput
-    //     style={styles.weightBox}
-    //     placeholder="น้ำหนัก"
-    //     keyboardType="numeric"
-    //     //value={}
-    //     //onChangeText={}
-    //   />
-
-    //   <Text style={styles.btnTextAll}>ส่วนสูง</Text>
-    //   <TextInput
-    //       style={styles.heightBox}
-    //       placeholder="ส่วนสูง"
-    //       keyboardType="numeric"
-    //       //value={}
-    //       //onChangeText={}
-    //   />
-
-    //   <Text style={styles.btnTextAll}>พฤติกรรม</Text>  
-    //   <View style={styles.pickerBorder2}>
-    //     <Picker
-    //       // selectedValue={selectedValue}
-    //       style={styles.pickerdropdown}
-    //       // onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
-
-    //     >
-    //     {/* อย่าลืม disable  และจัดให้ตรงกลาง*/}
-    //       <Picker.Item label="พฤติกรรมการออกกำลังกาย" />
-    //       <Picker.Item label="ออกกำลังกายน้อยมาก" value="1.2" />
-    //       <Picker.Item label="ออกกำลังกายน้อย (อาทิตย์ละ 1 – 3 วัน)" value="1.375" />
-    //       <Picker.Item label="ออกกำลังกายปานกลาง (อาทิตย์ละ 3 – 5 วัน)" value="1.55" />
-    //       <Picker.Item label="ออกกำลังกายอย่างหนัก (อาทิตย์ละ 6 – 7 วัน)" value="1.725" />
-    //       <Picker.Item label="เป็นนักกีฬาหรือทำงานที่ต้องใช้แรงงานมาก" value="1.9" />            
-    //     </Picker>
-    //   </View>
-
-    //   <View style={{alignItems: "center" , marginTop: 30,}}>
-    //     <TouchableOpacity 
-    //       // onPress={} 
-    //       style={styles.btnSave}>
-    //       <Text style={styles.btnSaveText}>บันทึก</Text>
-    //     </TouchableOpacity>
-    //   </View>
-
-    // </View>
-
-// ข้อมูลเข้าสู่ระบบ
     <View style={styles.container}>
       <View style={styles.headBox} >
-        <Text style={styles.headText}>ข้อมูลเข้าสู่ระบบ</Text>
+        <Text style={styles.headText}>ข้อมูลส่วนตัว</Text>
       </View>
-      <Text style={styles.btnTextAll}>ชื่อผู้ใช้</Text>
+      <Text style={styles.btnTextAll}>เพศ</Text>
+      <View style={styles.pickerBorder}>
+        <Picker
+          // selectedValue={selectedValue}
+          style={styles.pickerdropdown}
+          // onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+                
+        >
+        {/* อย่าลืม disable  และจัดให้ตรงกลาง*/}
+          <Picker.Item label="เพศ" />
+          <Picker.Item label="ชาย" value="male" />
+          <Picker.Item label="หญิง" value="femaile" />
+        </Picker>
+      </View>
+
+      <Text style={styles.btnTextAll}>อายุ</Text>
       <TextInput
-        style={styles.Box}
-        placeholder="ชื่อผู้ใช้"
-        keyboardType="email-address"
+        style={styles.Box2}
+        placeholder="อายุ"
+        keyboardType="numeric"
         //value={}
         //onChangeText={}
       />
 
-      <Text style={styles.btnTextAll}>รหัสผ่านเก่า</Text>
+      <Text style={styles.btnTextAll}>น้ำหนัก</Text>  
       <TextInput
-        style={styles.Box}
-        placeholder="รหัสผ่านเก่า"
-        keyboardType="default"
-        secureTextEntry={true}
+        style={styles.Box2}
+        placeholder="น้ำหนัก"
+        keyboardType="numeric"
         //value={}
         //onChangeText={}
       />
 
-    <Text style={styles.btnTextAll}>รหัสผ่านใหม่</Text>
-    <TextInput
-        style={styles.Box}
-        placeholder="รหัสผ่านใหม่"
-        keyboardType="default"
-        secureTextEntry={true}
-        //value={}
-        //onChangeText={}
+      <Text style={styles.btnTextAll}>ส่วนสูง</Text>
+      <TextInput
+          style={styles.Box2}
+          placeholder="ส่วนสูง"
+          keyboardType="numeric"
+          //value={}
+          //onChangeText={}
       />
-    <Text style={styles.btnTextAll}>ยืนยันรหัสผ่านใหม่</Text>
-    <TextInput
-        style={styles.Box}
-        placeholder="ยืนยันรหัสผ่านใหม่"
-        keyboardType="default"
-        secureTextEntry={true}
-        //value={}
-        //onChangeText={}
-      />
-    <View style={{alignItems: "center" , marginTop: 30,}}>
-      <TouchableOpacity 
-        // onPress={} 
-        style={styles.btnSave}>
-        <Text style={styles.btnSaveText}>บันทึก</Text>
-      </TouchableOpacity>
+
+      <Text style={styles.btnTextAll}>พฤติกรรม</Text>  
+      <View style={styles.pickerBorder2}>
+        <Picker
+          // selectedValue={selectedValue}
+          style={styles.pickerdropdown}
+          // onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+
+        >
+        {/* อย่าลืม disable  และจัดให้ตรงกลาง*/}
+          <Picker.Item label="พฤติกรรมการออกกำลังกาย" />
+          <Picker.Item label="ออกกำลังกายน้อยมาก" value="1.2" />
+          <Picker.Item label="ออกกำลังกายน้อย (อาทิตย์ละ 1 – 3 วัน)" value="1.375" />
+          <Picker.Item label="ออกกำลังกายปานกลาง (อาทิตย์ละ 3 – 5 วัน)" value="1.55" />
+          <Picker.Item label="ออกกำลังกายอย่างหนัก (อาทิตย์ละ 6 – 7 วัน)" value="1.725" />
+          <Picker.Item label="เป็นนักกีฬาหรือทำงานที่ต้องใช้แรงงานมาก" value="1.9" />            
+        </Picker>
+      </View>
+
+      <View style={{alignItems: "center" , marginTop: 30,}}>
+        <TouchableOpacity 
+          // onPress={} 
+          style={styles.btnSave}>
+          <Text style={styles.btnSaveText}>บันทึก</Text>
+        </TouchableOpacity>
+      </View>
+
     </View>
-  </View>
+
+// ข้อมูลเข้าสู่ระบบ
+  //   <View style={styles.container}>
+  //     <View style={styles.headBox} >
+  //       <Text style={styles.headText}>ข้อมูลเข้าสู่ระบบ</Text>
+  //     </View>
+  //     <Text style={styles.btnTextAll}>ชื่อผู้ใช้</Text>
+  //     <TextInput
+  //       style={styles.Box}
+  //       placeholder="ชื่อผู้ใช้"
+  //       keyboardType="email-address"
+  //       //value={}
+  //       //onChangeText={}
+  //     />
+
+  //     <Text style={styles.btnTextAll}>รหัสผ่านเก่า</Text>
+  //     <TextInput
+  //       style={styles.Box}
+  //       placeholder="รหัสผ่านเก่า"
+  //       keyboardType="default"
+  //       secureTextEntry={true}
+  //       //value={}
+  //       //onChangeText={}
+  //     />
+
+  //   <Text style={styles.btnTextAll}>รหัสผ่านใหม่</Text>
+  //   <TextInput
+  //       style={styles.Box}
+  //       placeholder="รหัสผ่านใหม่"
+  //       keyboardType="default"
+  //       secureTextEntry={true}
+  //       //value={}
+  //       //onChangeText={}
+  //     />
+  //   <Text style={styles.btnTextAll}>ยืนยันรหัสผ่านใหม่</Text>
+  //   <TextInput
+  //       style={styles.Box}
+  //       placeholder="ยืนยันรหัสผ่านใหม่"
+  //       keyboardType="default"
+  //       secureTextEntry={true}
+  //       //value={}
+  //       //onChangeText={}
+  //     />
+  //   <View style={{alignItems: "center" , marginTop: 30,}}>
+  //     <TouchableOpacity 
+  //       // onPress={} 
+  //       style={styles.btnSave}>
+  //       <Text style={styles.btnSaveText}>บันทึก</Text>
+  //     </TouchableOpacity>
+  //   </View>
+  // </View>
   );
 };
 
@@ -163,13 +163,13 @@ const styles = StyleSheet.create({
     marginTop: 30
   },
   pickerBorder:{
-    width: "25%",
+    width: "40%",
     height: 45,
+    marginTop: -35,
+    marginLeft: 150,
     borderColor: '#adacac',
     borderWidth: 2,
     borderRadius: 10,
-    marginTop: -35,
-    marginLeft: 150,
   },
   Box:{
     marginTop: -35,
@@ -179,17 +179,17 @@ const styles = StyleSheet.create({
     borderColor: '#adacac',
     borderWidth: 2,
     borderRadius: 10,
-    fontSize: 20,
+    fontSize: 18,
     textAlign: "center",
   },
   pickerBorder2:{
     width: "50%",
     height: 45,
+    marginTop: -30,
+    marginLeft: 150, 
     borderColor: '#adacac',
     borderWidth: 2,
     borderRadius: 10,
-    marginTop: -35,
-    marginLeft: 150, 
   },
   btnSave: {
     width: "40%",
@@ -205,6 +205,34 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     alignSelf: "center",
   },
+  Box2:{
+    marginTop: -35,
+    marginLeft: 150,
+    width: "40%",
+    height: 45,
+    borderColor: '#adacac',
+    borderWidth: 2,
+    borderRadius: 10,
+    fontSize: 18,
+    textAlign: "center",
+  },
+  pickerdropdown:{
+    fontFamily: 'serif',
+    fontSize: 18,
+    // paddingHorizontal: 10,
+    // paddingVertical: 10,
+    // borderWidth: 2,
+    // borderColor: '#8ec18d',
+    color: "#adacac",
+    // fontWeight: "bold",
+    // borderRadius: 8,
+    // borderStyle: "hidden",
+    // marginTop: 5,
+    // padding: 5,
+    marginTop: -5,
+    textAlign: "center",
+    
+  }
 
 });
 

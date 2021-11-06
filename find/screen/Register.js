@@ -6,7 +6,7 @@ const Register = () => {
    
   return (
     <View style={styles.container}>
-        <View style={{alignItems: "center", marginTop: 50}}>
+        <View style={{alignItems: "center", marginTop: 40}}>
             <Image style={styles.diet} source={require("../assets/Diet.gif")}/>
         </View>
         
@@ -38,7 +38,7 @@ const Register = () => {
             />
         </View>
 
-        <View style={{alignItems: "center" , marginTop: 50,}}>
+        <View style={{alignItems: "center" , marginTop: 40,}}>
             <TouchableOpacity 
                 // onPress={} 
                 style={styles.btnContainer}>
@@ -46,7 +46,7 @@ const Register = () => {
             </TouchableOpacity>
         </View>
 
-        <View style={{flexDirection: 'row', justifyContent: "center" , marginTop: 50,}}>
+        <View style={{flexDirection: 'row', justifyContent: "center" , marginTop: 40,}}>
                 <Text style={styles.btnNewText2}>มีบัญชีผู้ใช้อยู่แล้ว ?</Text>
                 <TouchableOpacity 
                     // onPress={} 

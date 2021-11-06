@@ -2,13 +2,14 @@ import React, { useRef } from "react";
 import {Text, View, StyleSheet, Image, TextInput, Button, TouchableOpacity, ScrollView } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons'; 
 import { Octicons } from '@expo/vector-icons';
-import { Fontisto } from '@expo/vector-icons'; 
+import { Ionicons } from '@expo/vector-icons'; 
+
 import {Picker} from '@react-native-picker/picker';
 
 const FavoriteMenu = () => {
   
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
 
         <View style={[styles.item1, {flex:2}]}>
             <Image style={styles.foodImage} source={require("../assets/yum.png")}/>
@@ -32,17 +33,16 @@ const FavoriteMenu = () => {
                 <View style={[styles.right ,{flex:1}]}>
 
                     {/* ไอคอนตอนกด fav สีดำ */}
-                    <Fontisto name="bookmark-alt" size={45} color="black" style={styles.favIcon}/>
-
+                    <Ionicons name="bookmark" size={40} color="black" style={styles.favIcon}/>
                     {/* ไอคอนตอนยังไม่กด fav สีขาว */}
-                    {/* <Fontisto name="bookmark" size={45} color="black" style={styles.favIcon} /> */}
+                    {/* <Ionicons name="bookmark-outline" size={40} color="black" style={styles.favIcon}/> */}
 
                     <Text style={styles.foodCal}>120 Kcal.</Text>                   
                 </View> 
 
             </View>
 
-            <ScrollView>
+            {/* <ScrollView> */}
 
                 <View style={[styles.foodCard]}>
 
@@ -116,15 +116,15 @@ const FavoriteMenu = () => {
                     <Text style={styles.stepDetail}>ปรุงรสด้วยแคร์ช้อยส์สูตรดั้งเดิม น้ำปลา น้ำมะนาว พริกป่นตามชอบ คลุกเคล้าให้เข้ากันดี</Text>
                 </View>
                 
+                
                 <View style={styles.line} />
 
             <View style={styles.bottom}>
                 <Text style={styles.foodCalBottom}>120 Kcal.</Text>   
-
                 <View style={styles.pickerBorder}>
-                    <Picker
+                    <Picker 
                     // selectedValue={selectedValue}
-                    // style={styles.pickerdropdown}
+                    style={styles.pickerdropdown}
                     // onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
                   
                     >
@@ -133,8 +133,11 @@ const FavoriteMenu = () => {
                         <Picker.Item label="อาหารเช้า" value="breakfast" />
                         <Picker.Item label="อาหารกลางวัน" value="lunch" />
                         <Picker.Item label="อาหารเย็น" value="dinner" />
-                    </Picker>
+                    </Picker >
                 </View>
+
+
+                
 
             </View>
 
@@ -146,11 +149,11 @@ const FavoriteMenu = () => {
             </TouchableOpacity>
         </View>
 
-            </ScrollView>
+            {/* </ScrollView> */}
 
         </View>
         
-    </View>
+    </ScrollView>
   );
 };
 
@@ -164,6 +167,8 @@ const styles = StyleSheet.create({
   },
   item1:{
     backgroundColor:"#fff" ,
+    height: 150,
+    width: "100%"
   },
   item2:{
     backgroundColor:"#fff" , 
@@ -203,8 +208,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#e4efe3",
   },
   favIcon:{
-    left: 85,
-    marginTop: -2
+    alignSelf: "flex-end",
+    marginTop: -6,
+    marginRight: 10
   },
   square:{
     width: 110,
@@ -328,6 +334,21 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     alignSelf: "center",
   },
+  pickerdropdown:{
+    fontFamily: 'serif',
+    fontSize: 18,
+    // paddingHorizontal: 10,
+    // paddingVertical: 10,
+    // borderWidth: 2,
+    // borderColor: '#8ec18d',
+    color: "#adacac",
+    // fontWeight: "bold",
+    // borderRadius: 8,
+    marginTop: -5,
+    // padding: 4,
+    // borderStyle: "hidden",
+    textAlign: "center"
+  }
 });
 
 export default FavoriteMenu;
