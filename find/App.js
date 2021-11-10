@@ -9,15 +9,17 @@ import Register2 from './screen/Register2';
 import MyProfile from './screen/MyProfile';
 import EditProfile from './screen/EditProfile';
 import Breakfast from './screen/Breakfast';
-import FavoriteMenu from './screen/FavoriteMenu';
-
+import Menu from './screen/Menu';
+import Home from './screen/Home';
+import FindRecipe from './screen/FindRecipe';
+// import PieChart from './screen/PieChart'
 export default function App() {
   return (
     // <View style={styles.container}>
     //   <Text>Open up App.js to start working on your app!</Text>
     //   <StatusBar style="auto" />
     // </View>
-    <FavoriteMenu/>
+    <FindRecipe/>
     // <EditProfile/>
   );
 }

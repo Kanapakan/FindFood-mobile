@@ -7,10 +7,10 @@ const Breakfast = () => {
 
   return (
 
-// รายการล่าสุด
+// รายการที่เลือก
     <View style={styles.container}>
         <View style={styles.headBox} >
-            <Text style={styles.headText}>รายการล่าสุด</Text>
+            <Text style={styles.headText}>รายการที่เลือก</Text>
         </View>
 
        
