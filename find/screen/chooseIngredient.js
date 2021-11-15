@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import {Text, View, StyleSheet, Image, TextInput, TouchableOpacity} from "react-native";
+import {Text, View, StyleSheet, Image, TextInput, ScrollView, TouchableOpacity} from "react-native";
 import { MaterialIcons } from '@expo/vector-icons'; 
 import { CheckBox } from 'react-native-elements'
 
@@ -22,10 +22,14 @@ const [checked4, setchecked4] = useState(false);
     
         <View style={styles.container}>
 
-        {/* container ของเนื้อ และผลิตภัณฑ์จากสัตว์ */}
-        <Text style={styles.headerText}>เนื้อ และผลิตภัณฑ์จากสัตว์</Text>
-            {/* checkbox ทั้ง 2 ฝั้ง */}
-            <View style={styles.pararellContainer}>
+        <View style={{flex:3.4}}>
+          <ScrollView>
+           
+
+            {/* container ของเนื้อ และผลิตภัณฑ์จากสัตว์ */}
+            <Text style={styles.headerText}>เนื้อ และผลิตภัณฑ์จากสัตว์</Text>
+              {/* checkbox ทั้ง 2 ฝั้ง */}
+              <View style={styles.pararellContainer}>
 
                 {/* checkbox 1 อัน ฝั่งซ้าย */}
                 <View style={styles.checkboxContainer}>
@@ -59,15 +63,18 @@ const [checked4, setchecked4] = useState(false);
 
             </View>
 
-            {/* code เหมือนกับข้างบนนะ แค่ทดลองโชว์เฉยๆ*/}
+            
 
-            {/* container ของผัก และผลไม้ */}
-        <Text style={styles.headerText}>ผัก และผลไม้</Text>
-            {/* checkbox ทั้ง 2 ฝั้ง */}
-            <View style={styles.pararellContainer}>
 
-                {/* checkbox 1 อัน ฝั่งซ้าย */}
-                <View style={styles.checkboxContainer}>
+              {/* code เหมือนกับข้างบนนะ แค่ทดลองโชว์เฉยๆ*/}
+
+              {/* container ของผัก และผลไม้ */}
+              <Text style={styles.headerText}>ผัก และผลไม้</Text>
+              {/* checkbox ทั้ง 2 ฝั้ง */}
+                <View style={styles.pararellContainer}>
+
+                  {/* checkbox 1 อัน ฝั่งซ้าย */}
+                  <View style={styles.checkboxContainer}>
 
                     <View style={styles.checkContainer}>
                         <CheckBox
@@ -79,10 +86,10 @@ const [checked4, setchecked4] = useState(false);
                         
                         <Text style={styles.ingredientName}>กะเพรา</Text>
 
-                </View>
+                  </View>
                 
-                {/* checkbox 1 อัน ฝั่งขวา */}
-                <View style={styles.checkboxContainer}>
+                  {/* checkbox 1 อัน ฝั่งขวา */}
+                  <View style={styles.checkboxContainer}>
 
                     <View style={styles.checkContainer}>
                         <CheckBox
@@ -94,15 +101,16 @@ const [checked4, setchecked4] = useState(false);
 
                         <Text style={styles.ingredientName}>กะหล่ำปลี</Text>
       
-                 </View>
+                  </View>
 
-            </View>
-            
+                </View>
+
+          </ScrollView>
+        </View>
 
 
 
-
-            <View style={{flex:1, justifyContent:"flex-end",}}>
+            <View style={{flex:0.5, justifyContent:"flex-end",}}>
 
                 <View style={styles.btnContainer}>
 
@@ -120,17 +128,10 @@ const [checked4, setchecked4] = useState(false);
 
                 </View>
 
-                
-
-                
-    
             </View>      
           
         </View>
       )      
-
-
-
 };
     
 const styles = StyleSheet.create({
