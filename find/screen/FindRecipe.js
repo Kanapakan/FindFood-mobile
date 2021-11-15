@@ -1,64 +1,147 @@
-import React, { useRef } from "react";
-import {Text, View, StyleSheet, Image, TextInput, TouchableOpacity, CheckBox } from "react-native";
+import React, { useRef, useState } from "react";
+import {Text, View, StyleSheet, Image, TextInput, TouchableOpacity} from "react-native";
 import { MaterialIcons } from '@expo/vector-icons'; 
+import { CheckBox } from 'react-native-elements'
 
 
 
-const FindRecipe = () => {
+
+const FindRecipe  = () =>  {
+const [checkedVegan, setcheckedVegan] = useState(false);
+const [checkedGluten, setcheckedGluten] = useState(false);
+const [checkedEgg, setcheckedEgg] = useState(false);
 
   return (
-// ผลการค้นหา    
+    // ผลการค้นหา    
+    
+        // <View style={styles.container}>
+        //     <View style={styles.headBox} >
+        //         <Text style={styles.headText}>ผลการค้นหา</Text>
+        //     </View>
+    
+           
+        //     {/* 1 รายการอาหาร */}
+        //     <View>
+        //         <View style={{flexDirection: 'row', marginTop: 20}}>
+        //             <Image style={styles.food} source={require("../assets/yum.png")}/>
+    
+        //             <View style={styles.foodBox}>
+        //                 <Text style={styles.foodName}>ยำวุ้นเส้น</Text>
+        //                 <View style={styles.foodTime}>
+        //                     <MaterialIcons name="access-time" size={26} color="black"/>
+        //                     <Text style={styles.timeText}>10 นาที</Text>
+        //                 </View>
+    
+        //             </View>
+        //             <Text style={styles.foodCal}>120 Kcal.</Text>
+                
+        //         </View>
+        //         <View style={styles.line} />
+    
+        //     </View>      
+          
+        // </View>
+    
+    // ค้นหาด้วยตัวเอง
+    
+        <View style={styles.container}>
+            <View style={styles.headBox} >
+                <Text style={styles.headText}>ค้นหาด้วยตัวเอง</Text>
+            </View>
+    
+            <Text style={styles.sensitiveText}>การแพ้</Text>
 
-    // <View style={styles.container}>
-    //     <View style={styles.headBox} >
-    //         <Text style={styles.headText}>ผลการค้นหา</Text>
-    //     </View>
 
-       
-    //     {/* 1 รายการอาหาร */}
-    //     <View>
-    //         <View style={{flexDirection: 'row', marginTop: 20}}>
-    //             <Image style={styles.food} source={require("../assets/yum.png")}/>
+            {/* checkbox 1 อัน Vegan */}
+            <View style={styles.checkboxContainer}>
 
-    //             <View style={styles.foodBox}>
-    //                 <Text style={styles.foodName}>ยำวุ้นเส้น</Text>
-    //                 <View style={styles.foodTime}>
-    //                     <MaterialIcons name="access-time" size={26} color="black"/>
-    //                     <Text style={styles.timeText}>10 นาที</Text>
-    //                 </View>
+              <View style={styles.checkContainer}>
+                <CheckBox
+                  checked={checkedVegan}
+                  onPress={() => setcheckedVegan(!checkedVegan)}
+                  checkedColor='#547f53'
+                  // Size='20'
+                />
+              </View>
 
-    //             </View>
-    //             <Text style={styles.foodCal}>120 Kcal.</Text>
+              <Text style={styles.typeSensitive}>Vegan</Text>
+
+            </View>
+
+            {/* checkbox 1 อัน Gluten free */}
+            <View style={styles.checkboxContainer}>
+
+              <View style={styles.checkContainer}>
+                <CheckBox
+                  checked={checkedGluten}
+                  onPress={() => setcheckedGluten(!checkedGluten)}
+                  checkedColor='#547f53'
+                  // Size='20'
+                />
+              </View>
+
+              <Text style={styles.typeSensitive}>Gluten free</Text>
+
+            </View>
+
+            {/* checkbox 1 อัน Egg free */}
+            <View style={styles.checkboxContainer}>
+
+              <View style={styles.checkContainer}>
+                <CheckBox
+                  checked={checkedEgg}
+                  onPress={() => setcheckedEgg(!checkedEgg)}
+                  checkedColor='#547f53'
+                  // Size='20'
+                />
+              </View>
+
+              <Text style={styles.typeSensitive}>Egg free</Text>
+      
+            </View>
+
+            {/* checkbox 1 อัน อื่นๆ */}
+            <View style={styles.checkboxContainer}>
+
+              <View style={styles.checkContainer2}>
+                <CheckBox
+                  checked={checkedEgg}
+                  onPress={() => setcheckedEgg(!checkedEgg)}
+                  checkedColor='#547f53'
+                  // Size='20'
+                />
+              </View>
+
+              <Text style={styles.typeSensitive2}>อื่น ๆ</Text>
+              <TextInput
+                style={styles.textInputBox}
+                placeholder="โปรดระบุ"
+                keyboardType='default'
+                //value={}
+                //onChangeText={}
+            />
+
+            </View>
             
-    //         </View>
-    //         <View style={styles.line} />
+            
+            
+            
 
-    //     </View>      
-      
-    // </View>
-
-// ค้นหาด้วยตัวเอง
-
-    <View style={styles.container}>
-        <View style={styles.headBox} >
-            <Text style={styles.headText}>ค้นหาด้วยตัวเอง</Text>
+    
+            <View style={{flex:1, justifyContent:"flex-end",alignItems: "center", margin: 20}}>
+                <TouchableOpacity 
+                    // onPress={} 
+                    style={styles.btnContainer}>
+                    <Text style={styles.btnText}>ต่อไป</Text>
+                </TouchableOpacity>
+    
+            </View>      
+          
         </View>
+      )      
 
-        {/* <Text style={styles.sensitiveText}>การแพ้</Text> */}
 
-        <View style={{flex:1, justifyContent:"flex-end",alignItems: "center", margin: 20}}>
-            <TouchableOpacity 
-                // onPress={} 
-                style={styles.btnContainer}>
-                <Text style={styles.btnText}>ต่อไป</Text>
-            </TouchableOpacity>
 
-        </View>      
-      
-    </View>
-        
-
-    );
 };
     
     const styles = StyleSheet.create({
@@ -144,6 +227,44 @@ const FindRecipe = () => {
     fontWeight: "bold",
     alignSelf: "center",
   },
+  checkboxContainer:{
+    flexDirection: "row",
+    paddingHorizontal: "20%",
+    marginVertical: -5
+  },
+  checkContainer:{
+    flex: 0.3,
+  },
+  typeSensitive:{
+    flex: 1,
+    fontSize: 20,
+    color: "#547f53",
+    alignSelf: "center",
+    flexDirection: "row"
+  },
+  checkContainer2:{
+    flex: 1,
+  },
+  typeSensitive2:{
+    flex: 1,
+    fontSize: 20,
+    color: "#547f53",
+    alignSelf: "center",
+    flexDirection: "row"
+  },
+  textInputBox:{
+    flex: 2,
+    marginHorizontal: 10,
+    alignSelf: "center",
+    fontSize: 20,
+    color: "#547f53",
+    borderRadius: 10,
+    borderColor: "#8ec18d",
+    borderWidth: 2,
+    height: 40,
+    textAlign: "center",
+  }
+ 
 
 
 
