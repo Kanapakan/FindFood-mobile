@@ -1,2 +1,12 @@
 # FindFood-mobile
 ![image](https://i.imgur.com/A0wcIZB.png)
+![image](https://i.imgur.com/fk9Cs1L.png)
+![image](https://i.imgur.com/NMyazl0.png)
+![image](https://i.imgur.com/CNLoCyy.png)
+![image](https://i.imgur.com/fQoT3TG.png)
+![image](https://i.imgur.com/R1IpPvS.png)
+![image](https://i.imgur.com/YSHCYOc.png)
+![image](https://i.imgur.com/CCxBxG0.png)
+![image](https://i.imgur.com/udKYGdi.png)
+![image](https://i.imgur.com/sIvITxt.png)
+![image](https://i.imgur.com/e9dsqv8.png)
